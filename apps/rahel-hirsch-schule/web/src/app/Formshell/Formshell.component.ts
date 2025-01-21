@@ -4,9 +4,9 @@ import { RouterModule } from '@angular/router';
 @Component({
   imports: [RouterModule],
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  templateUrl: './Formshell.component.html',
+  styleUrl: './Formshell.component.css',
 })
-export class AppComponent {
+export class FormshellComponent {
   title = 'rahel-hirsch-schule-web';
 }
