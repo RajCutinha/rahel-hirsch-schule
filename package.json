@@ -5,7 +5,7 @@
   "scripts": {
     "rahel:web": "nx run rahel-hirsch-schule-web:serve",
     "rahel:api": "nx run rahel-hirsch-schule-api:serve:development",
-    "rahel:dev": "concurrently --names rahel-web,rahel-api -c #f87171,#64748b \"pnpm run rahel:web\" \"pnpm run rahel:api\""
+    "rahel:dev": "concurrently --names rahel-web,rahel-api -c #f87171,#64748b \"nx run rahel-hirsch-schule-web:serve\" \"nx run rahel-hirsch-schule-api:serve:development\""
   },
   "private": true,
   "dependencies": {
