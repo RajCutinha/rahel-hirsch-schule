@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "concurrently --names rahel-web,rahel-api -c #f87171,#64748b \"nx run rahel-hirsch-schule-web:serve\" \"nx run rahel-hirsch-schule-api:serve:development\"",
+    "start": "concurrently --names rahel-web,rahel-api -c #f87171,#64748b \"nx run rahel-hirsch-schule-web:serve\"",
     "rahel:web": "nx run rahel-hirsch-schule-web:serve",
     "rahel:api": "nx run rahel-hirsch-schule-api:serve:development",
     "rahel:dev": "concurrently --names rahel-web,rahel-api -c #f87171,#64748b \"nx run rahel-hirsch-schule-web:serve\" \"nx run rahel-hirsch-schule-api:serve:development\""
