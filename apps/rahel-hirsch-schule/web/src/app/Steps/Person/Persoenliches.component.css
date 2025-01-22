@@ -2,3 +2,18 @@
     display: flex;
     justify-content: space-evenly;
 }
+
+
+
+
+
+:host ::ng-deep .p-inputtext { 
+    background-color: white;
+} 
+  
+:host ::ng-deep .p-inputtext:focus:enabled,  
+:host ::ng-deep .p-inputtext:hover 
+{ 
+    box-shadow: none; 
+    border: 2px solid green; 
+}
