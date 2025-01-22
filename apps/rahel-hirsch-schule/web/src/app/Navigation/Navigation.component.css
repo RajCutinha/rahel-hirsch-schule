@@ -1,0 +1,28 @@
+
+.navigation {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.nav-button {
+    background-color: #00628A; 
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 10px; 
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+  }
+  
+
+  @media (max-width: 768px) {
+    .nav-button {
+      display: block; 
+      width: 100%;
+      margin: 5px 0; 
+    }
+  }
+
