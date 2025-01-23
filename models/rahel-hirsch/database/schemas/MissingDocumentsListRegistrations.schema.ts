@@ -4,7 +4,7 @@ import { Registrations_Schema } from './Registrations.schema';
 import { MissingDocumentsList_Schema } from './MissingDocumentsList.schema';
 
 export const MissingDocumentsListRegistrations_Schema = mysqlTable('MissingDocumentsListRegistrations', {
-    MissingDocumentListRegistrationId: int('MissingDocumentList_RegistrationId').primaryKey().autoincrement(),
+    MissingDocumentListRegistrationId: int('MissingDocumentListRegistrationId').primaryKey().autoincrement(),
     RegistratioonId: int('RegistrationId')
         .notNull()
         .references(() => Registrations_Schema.RegistrationId),
