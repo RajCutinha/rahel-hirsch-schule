@@ -4,7 +4,10 @@
     "scripts": {
         "start": "concurrently --names rahel-web,rahel-api -c #f87171,#64748b \"nx run rahel-hirsch-schule-web:serve\" \"nx run rahel-hirsch-schule-api:serve\"",
         "rahel:web": "nx run rahel-hirsch-schule-web:serve",
-        "rahel:api": "nx run rahel-hirsch-schule-api:serve"
+        "rahel:api": "nx run rahel-hirsch-schule-api:serve",
+        "rahel:db-generate": "drizzle-kit generate",
+        "rahel:db-migrate": "drizzle-kit migrate",
+        "rahel:db-studio": "drizzle-kit studio"
     },
     "private": true,
     "dependencies": {
@@ -21,6 +24,7 @@
         "@nestjs/platform-express": "^10.0.2",
         "@primeng/themes": "^19.0.5",
         "axios": "^1.6.0",
+        "dotenv": "^16.4.7",
         "drizzle-orm": "^0.38.4",
         "mysql2": "^3.12.0",
         "primeicons": "^7.0.0",

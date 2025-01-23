@@ -15,7 +15,11 @@
         "skipLibCheck": true,
         "skipDefaultLibCheck": true,
         "baseUrl": ".",
-        "paths": {}
+        "paths": {
+          "@rahel-hirsch/models": [
+            "models/rahel-hirsch/schemas/index.ts"
+          ]
+        }
     },
     "exclude": ["node_modules", "tmp"]
 }
