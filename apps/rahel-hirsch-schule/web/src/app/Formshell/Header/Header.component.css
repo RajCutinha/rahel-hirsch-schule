@@ -1,20 +1,181 @@
+/* .header {
+  width: 100%;
+  background-color: #00628A; 
+  padding: 8px 9px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+} */
+
 .header {
-    width: 100%;
-    background-color: #00628A;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 25px;
+  width: 100%;
+  background-color: #00628A;
+  padding: 8px 9px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Ensure content wraps on small screens */
+}
+
+.header-content {
+  width: 100%;
+  max-width: 1180px;
+  display: flex;
+  justify-content: space-between; 
+ align-items: center;
 }
 
 
+.logo-container {
+  display: flex;
+  justify-content:center;
+  flex: 1 1 30%;
+}
+
 .logo-container img {
-    height: 35px; 
+  max-width:60px;
+  height: auto;
+}
+
+.title-container {
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  white-space: nowrap;
+  flex: 1 1 70%;
+  text-align: center;
 }
 
 
 .title-container h1 {
-    font-size: 20px; 
-    color: #ffffff; 
-    margin: 0;
+  color: white;
+  font-size: 2rem;
+  white-space: nowrap;
 }
+
+
+
+
+/* Large screens (min-width: 1024px and max-width: 1199px) - Laptops and large tablets */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .header {
+    padding: 10px 12px;
+  }
+
+  .title-container h1 {
+    font-size: 25px; /* Smaller title font size for laptops */
+  }
+
+  .logo-container img {
+    max-width: 80px; /* Logo size for laptops */
+  }
+}
+
+/* Medium screens (min-width: 768px and max-width: 1023px) - Tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header {
+    padding: 10px 20px;
+  }
+
+  .title-container h1 {
+    font-size: 20px; 
+    margin-right: 20px;
+  }
+
+  .logo-container img {
+    max-width: 70px; 
+  }
+}
+
+/* Adjustments for medium-sized devices (480px to 667px) */
+@media (min-width: 480px) and (max-width: 667px) {
+  .header {
+    padding: 8px 15px;
+  }
+
+  .logo-container img {
+    max-width: 60px; /* Suitable size for medium-sized devices */
+  }
+
+  .title-container h1 {
+    font-size: 17px;
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+/* Adjustments for larger small tablets and larger phones (668px to 767px) */
+@media (min-width: 668px) and (max-width: 767px) {
+  .header {
+    padding: 10px 20px;
+  }
+
+  .logo-container img {
+    max-width: 15px;
+  }
+
+  .title-container h1 {
+    font-size: 16px;
+    text-align: left; /* Keep title aligned left for larger screens */
+    margin-left: 10px;
+  }
+}
+
+
+/* Extra small screens (max-width: 479px) - Very small devices. older smartphones */
+@media (max-width: 479px) {
+  .header {
+    padding: 12px 16px;
+  }
+
+  .logo-container img {
+    max-width: 20px;
+  }
+
+  .title-container h1 {
+    font-size: 10px;
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+
+/* Extra small screens (max-width: 360px) */
+@media (max-width: 360px) {
+  .header {
+    padding: 5px 8px;
+  }
+
+  .logo-container img {
+    max-width: 30px;
+  }
+
+  .title-container h1 {
+    font-size: 10px; 
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
