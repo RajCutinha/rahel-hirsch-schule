@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    width: 100%;
+    margin: auto;
+  }
+  
+  .input-container {
+    display: flex;
+    flex: 1;
+    justify-content: space-between; 
+    align-items: center; 
+    margin: 1%;
+  }
+
+  .input-container.full-width {
+        width: 100%;
+    }
+    
+   .input-container small {
+        font-size: 12px;
+        color: gray;
+    }
+
+input{
+  width: 60%;
+  border-width: 1px;
+  border-color: gray;
+}
+
+.required {
+  color: red;
+}
+
