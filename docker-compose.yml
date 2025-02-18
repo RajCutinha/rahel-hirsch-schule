@@ -37,8 +37,6 @@ services:
       - "8090:80"
     environment:
       PMA_HOST: db
-      PMA_USER: root
-      PMA_PASSWORD: 80Qv2r&q3WnO
       MYSQL_ROOT_PASSWORD: 80Qv2r&q3WnO
     networks:
       - mysql-phpmyadmin
