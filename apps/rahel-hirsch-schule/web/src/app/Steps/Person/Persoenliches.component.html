@@ -14,8 +14,12 @@
       </div>
       <div class="container">
         <div class="input-container">
-          <label for="vorname">Geschlecht<span class="required">*</span></label>
-          <input type="text" id="vorname">
+          <label for="geschlecht">Geschlecht<span class="required mx-0">*</span></label>
+          <div class="gender-radio">
+            <input type="radio" id="männlich" name="geschlecht"><span class="gender">männlich</span>
+            <input type="radio" id="weiblich" name="geschlecht"><span class="gender">weiblich</span>
+            <input type="radio" id="divers" name="geschlecht"><span class="gender">divers</span>
+          </div>
         </div>
         <div class="input-container">
           <label for="nachname">Herkunftssprache der Eltern</label>
@@ -44,22 +48,48 @@
       </div>
       <div class="container">
         <div class="input-container">
-          <label for="vorname">Handynummer</label>
-          <input type="text" id="vorname">
+          <label for="handynummer">Handynummer</label>
+          <div class="input-details">
+            <input type="text" id="handynummer">
+            <p id="details">Bitte geben Sie in jedem Fall eine Handy- oder Telefonnummer an.</p>
+          </div>
         </div>
         <div class="input-container">
           <label for="nachname">Telefon</label>
-          <input type="text" id="nachname">
+          <div class="input-details">
+            <input type="text" id="telefon">
+            <p id="telefon">Bitte geben Sie in jedem Fall eine Handy- oder Telefonnummer an.</p>
+          </div>
         </div>
       </div>
       <div class="container">
         <div class="input-container">
           <label for="vorname">Ihre E-Mail</label>
-          <input type="text" id="vorname">
+          <div class="input-details">
+            <input type="text" id="email">
+            <p id="email">Wenn Sie eine eigene Mailadresse angeben, senden wir Ihnen eine Kopie der Anmeldung als E-Mail.</p>
+          </div>
         </div>
         <div class="input-container">
-          <label for="nachname">Ich bin unter 18</label>
-          <input type="text" id="nachname">
+          <label for="minor">Ich bin unter 18</label>
+          <div class="check">
+            <input type="checkbox" id="minor">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="input-container">
+          <label for="zustimmung">Zustimmung zur
+            Verwendung von Fotos</label>
+          <div class="input-details">
+            <div class="check-with-text d-flex">
+              <input type="checkbox" class="check-detail" id="zustimmung">
+              <span for="zustimmung" class="zustimmung">Ja, die Rahel-Hirsch-Schule darf Fotos von mir Verwenden</span>
+            </div>
+            <p id="zustimmung">Ich erteile hiermit der Rahel-Hirsch-Schule die jederzeit widerrufliche Erlaubnis, für schulische Zwecke (z.B. auf der Webseite der Schule, in Schulbroschüren, etc.) Fotos oder Abbildungen, auf denen ich zu erkennen bin, zu verwenden.</p>
+          </div>
+        </div>
+        <div class="input-container">        
         </div>
       </div>
 </div>
