@@ -1,8 +1,16 @@
 import 'dotenv/config';
 import { defineConfig } from 'drizzle-kit';
 
-
-function checkEnv() {
+function checkEnv(): {
+    host: string;
+    port?: number | undefined;
+    user?: string | undefined;
+    password?: string | undefined;
+    database: string;
+    ssl?: string | undefined;
+} | {
+    url: string;
+} {
   if('DB_CONECTION_STRING' in process.env) {
     return { url: process.env.DB_CONECTION_STRING! };
   } else {
@@ -11,8 +19,9 @@ function checkEnv() {
       port: Number(process.env.DB_PORT),
       user: process.env.DB_USERNAME!,
       password: process.env.DB_PASSWORD!,
-      database: process.env.DB_DATABASE!
-    }
+      database: process.env.DB_DATABASE!,
+      ssl: "false"
+    };
   }
 }
 
