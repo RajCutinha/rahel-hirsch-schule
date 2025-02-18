@@ -1,14 +1,32 @@
-import { mysqlTable, int } from 'drizzle-orm/mysql-core';
+import { mysqlTable, int, foreignKey } from 'drizzle-orm/mysql-core';
 
 import { Graduations_Schema } from './Graduations.schema';
 import { CourseCompletions_Schema } from './CourseCompletions.schema';
 
-export const EducationCoursesCompleted_Schema = mysqlTable('EduCourseComplete', {
-    EducationCoursesCompletedId: int('EduCourseCompleteId').primaryKey().autoincrement(),
-    GraduationId: int('GraduationId')
-        .notNull()
-        .references(() => Graduations_Schema.GraduationId),
-    CourseCompletedId: int('CourseCompleteId')
-        .notNull()
-        .references(() => CourseCompletions_Schema.CourseCompletedId)
-});
+export const EducationCoursesCompleted_Schema = mysqlTable(
+    'EduCourseComplete',
+    {
+        EduCourseCompleteId: int('EduCourseCompleteId')
+            .primaryKey()
+            .autoincrement(),
+
+        GraduationId: int('GraduationId').notNull(),
+
+        CourseCompletedId: int('CourseCompletedId').notNull(),
+    },
+    (table) => {
+        return {
+            fk_Graduation: foreignKey({
+                name: 'fk_ecc_graduation', 
+                columns: [table.GraduationId],
+                foreignColumns: [Graduations_Schema.GraduationId],
+            }),
+
+            fk_CourseCompleted: foreignKey({
+                name: 'fk_ecc_course', 
+                columns: [table.CourseCompletedId],
+                foreignColumns: [CourseCompletions_Schema.CourseCompletedId],
+            }),
+        };
+    }
+);
