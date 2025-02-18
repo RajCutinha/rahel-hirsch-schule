@@ -9,7 +9,7 @@ import { InputTextModule } from 'primeng/inputtext';
   imports: [RouterModule, ButtonModule, InputTextModule],
   selector: 'app-persoenliches',
   templateUrl: './Persoenliches.component.html',
-  styleUrl: './Persoenliches.component.css',
+  styleUrl: './Persoenliches.component.scss',
 
 })
 export class PersoenlichesComponent {
