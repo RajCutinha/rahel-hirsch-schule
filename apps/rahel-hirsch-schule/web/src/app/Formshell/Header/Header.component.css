@@ -21,19 +21,17 @@
 }
 
 .logo-container {
-   flex: 1 1 auto;
+   flex: 10%; /*  1 1 auto; */
 }
 
 .logo-container img {
     max-width: 100%;
     height: auto;
-    /* margin-left: 30px; */
+    margin-left: 30px;
 }
 
 .title-container {
-    flex: 2 2 auto;
-    text-align: center;
-    padding-left: 10px; 
+    flex: 1 1 auto;
     overflow: hidden; 
     white-space: nowrap;  
 }
@@ -41,9 +39,9 @@
 .title-container h1 {
     color: white;
     font-size: 2rem;
-    margin: 0;
     white-space: nowrap;
     overflow: hidden;
+    max-width: max-content;
     /* text-overflow: ellipsis; Add ellipsis if text overflows */
 }
 
