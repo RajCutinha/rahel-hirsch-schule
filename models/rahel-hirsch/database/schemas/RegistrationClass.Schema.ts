@@ -1,10 +1,10 @@
 import { mysqlTable, int, varchar } from 'drizzle-orm/mysql-core';
 
-import { Registrations_Schema } from './Registrations.schema';
+import { Registrations_Schema } from './Registration.schema';
 
-import { Classes_Schema } from './Classes.schema';
+import { Classes_Schema } from './Class.schema';
 
-export const RegistrationsClasses_Schema = mysqlTable('RegistrationsClasses', {
+export const RegistrationsClasses_Schema = mysqlTable('RegistrationClass', {
     RegistrationClassId: int('RegistrationClassId').primaryKey().autoincrement(),
     RegistrationId: int('RegistrationId')
         .notNull()

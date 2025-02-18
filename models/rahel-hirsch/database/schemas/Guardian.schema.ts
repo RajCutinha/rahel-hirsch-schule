@@ -1,9 +1,9 @@
 import { mysqlTable, int, varchar } from 'drizzle-orm/mysql-core';
 
-import { Persons_Schema } from './Persons.schema';
-import { Addresses_Schema } from './Addresses.schema';
+import { Persons_Schema } from './Person.schema';
+import { Addresses_Schema } from './Address.schema';
 
-export const Guardians_Schema = mysqlTable('Guardians', {
+export const Guardians_Schema = mysqlTable('Guardian', {
     GuardianId: int('GuardianId').primaryKey(),
     PersonId: int('PersonId')
         .notNull()

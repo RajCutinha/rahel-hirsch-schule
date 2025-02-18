@@ -1,8 +1,8 @@
 import { mysqlTable, int, mysqlEnum, timestamp, foreignKey } from 'drizzle-orm/mysql-core';
-import { Registrations_Schema } from './Registrations.schema';
+import { Registrations_Schema } from './Registration.schema';
 
 export const RegistrationsStatuses_Schema = mysqlTable(
-    'RegistrationsStatuses',
+    'RegistrationStatus',
     {
         RegistrationStatusId: int('RegistrationStatusId')
             .primaryKey()

@@ -1,6 +1,6 @@
 import { mysqlTable, int, tinyint, foreignKey } from 'drizzle-orm/mysql-core';
-import { Registrations_Schema } from './Registrations.schema';
-import { MissingDocumentsList_Schema } from './MissingDocumentsList.schema';
+import { Registrations_Schema } from './Registration.schema';
+import { MissingDocumentsList_Schema } from './MissingDocumentList.schema';
 
 export const MissingDocumentsListRegistrations_Schema = mysqlTable(
     'MissingDocListRegistration',

@@ -1,7 +1,7 @@
 import { mysqlTable, int, foreignKey } from 'drizzle-orm/mysql-core';
 
-import { Graduations_Schema } from './Graduations.schema';
-import { CourseCompletions_Schema } from './CourseCompletions.schema';
+import { Graduations_Schema } from './Graduation.schema';
+import { CourseCompletions_Schema } from './CourseCompletion.schema';
 
 export const EducationCoursesCompleted_Schema = mysqlTable(
     'EduCourseComplete',

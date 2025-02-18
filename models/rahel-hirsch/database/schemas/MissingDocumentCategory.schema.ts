@@ -1,8 +1,8 @@
 import { mysqlTable, int, varchar, foreignKey } from 'drizzle-orm/mysql-core';
-import { MissingDocumentsList_Schema } from './MissingDocumentsList.schema';
+import { MissingDocumentsList_Schema } from './MissingDocumentList.schema';
 
 export const MissingDocumentsCategorys_Schema = mysqlTable(
-    'MissingDocumentsCategories',
+    'MissingDocumentCategory',
     {
         MissingDocumentCategoryId: int('MissingDocumentCategoryId')
             .primaryKey()
