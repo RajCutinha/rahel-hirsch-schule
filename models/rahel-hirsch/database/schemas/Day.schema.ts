@@ -1,6 +1,6 @@
 import { mysqlTable, int } from 'drizzle-orm/mysql-core';
 
-export const Days_Schema = mysqlTable('Days', {
+export const Days_Schema = mysqlTable('Day', {
     DayId: int('DayId').primaryKey().autoincrement(),
     monday: int('monday').notNull(),
     tuesday: int('tuesday').notNull(),

@@ -1,8 +1,8 @@
 import { mysqlTable, int, tinyint } from 'drizzle-orm/mysql-core';
 
-import { Persons_Schema } from './Persons.schema';
+import { Persons_Schema } from './Person.schema';
 
-export const Graduations_Schema = mysqlTable('Graduations', {
+export const Graduations_Schema = mysqlTable('Graduation', {
     GraduationId: int('GraduationId').primaryKey(),
     PersonId: int('PersonId')
         .notNull()

@@ -1,7 +1,7 @@
 import { mysqlTable, int } from 'drizzle-orm/mysql-core';
 
-import { AdminUsers_Schema } from './AdminUsers.schema';
-import { Registrations_Schema } from './Registrations.schema';
+import { AdminUsers_Schema } from './AdminUser.schema';
+import { Registrations_Schema } from './Registration.schema';
 
 export const RegistrationCheck_Schema = mysqlTable('RegistrationCheck', {
     RegistrationCheck_Id: int('RegistrationCheck_Id').primaryKey().autoincrement(),
