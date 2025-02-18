@@ -1,8 +1,8 @@
 import { mysqlTable, int, mysqlEnum, varchar, date, tinyint } from 'drizzle-orm/mysql-core';
 
-import { Days_Schema } from './Days.schema';
+import { Days_Schema } from './Day.schema';
 
-export const Persons_Schema = mysqlTable('Persons', {
+export const Persons_Schema = mysqlTable('Person', {
     PersonId: int('PersonId').primaryKey(),
     DaysId: int('DaysId')
         .notNull()

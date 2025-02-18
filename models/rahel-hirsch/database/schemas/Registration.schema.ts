@@ -1,8 +1,8 @@
 import { mysqlTable, int, varchar, mysqlEnum, tinyint } from 'drizzle-orm/mysql-core';
 
-import { Persons_Schema } from './Persons.schema';
+import { Persons_Schema } from './Person.schema';
 
-export const Registrations_Schema = mysqlTable('Registrations', {
+export const Registrations_Schema = mysqlTable('Registration', {
     RegistrationId: int('RegistrationId').primaryKey().autoincrement(),
     PersonId: int('PersonId')
         .notNull()
