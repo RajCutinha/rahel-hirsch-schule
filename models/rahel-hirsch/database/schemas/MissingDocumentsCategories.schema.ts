@@ -2,7 +2,7 @@ import { mysqlTable, int, varchar } from 'drizzle-orm/mysql-core';
 
 import { MissingDocumentsList_Schema } from './MissingDocumentsList.schema';
 
-export const MissingDocumentsCategorys_Schema = mysqlTable('MissingDocumentsCategorys', {
+export const MissingDocumentsCategorys_Schema = mysqlTable('MissingDocumentsCategories', {
     MissingDocumentCategoryId: int('MissingDocumentCategoryId').primaryKey().autoincrement(),
     MissingDocumentListId: int('MissingDocumentListId')
         .notNull()

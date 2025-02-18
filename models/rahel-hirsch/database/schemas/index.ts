@@ -9,7 +9,7 @@ export * from './EducationsGraduations.schema';
 export * from './Employers.schema';
 export * from './Graduations.schema';
 export * from './Guardians.schema';
-export * from './MissingDocumentsCategorys.schema';
+export * from './MissingDocumentsCategories.schema';
 export * from './MissingDocumentsList.schema';
 export * from './MissingDocumentsListRegistrations.schema';
 export * from './Persons.schema';
