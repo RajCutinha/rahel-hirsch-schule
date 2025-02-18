@@ -1,7 +1,14 @@
 
 .navigation {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+  gap: 10px;
 }
 
 .nav-button {
@@ -12,17 +19,18 @@
     padding: 10px 20px;
     margin: 0 10px; 
     cursor: pointer;
-    display: inline-block;
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 8%;
   }
   
 
   @media (max-width: 768px) {
-    .nav-button {
-      display: block; 
-      width: 100%;
-      margin: 5px 0; 
-    }
+  .nav-button {
+      width: 45%;
+      margin: 5px 0;
+      font-size: 0.8rem;
+  }
   }
 
