@@ -17,7 +17,7 @@
         "baseUrl": ".",
         "paths": {
           "@rahel-hirsch/models": [
-            "models/rahel-hirsch/schemas/index.ts"
+            "models/rahel-hirsch/database/schemas/index.ts"
           ]
         }
     },
