@@ -1,4 +1,4 @@
-import { Module, DynamicModule } from '@nestjs/common';
+import { Module, DynamicModule, Global } from '@nestjs/common';
 
 import { MySql2Database } from 'drizzle-orm/mysql2';
 import { drizzle } from 'drizzle-orm/mysql2';
@@ -7,6 +7,7 @@ import { PoolOptions } from 'mysql2';
 export const DATABASE = Symbol('DATABASE');
 export type DATABASE = MySql2Database;
 
+@Global()
 @Module({})
 export class DatabaseModule {
     static forRoot(env: Record<string, string>): DynamicModule {
