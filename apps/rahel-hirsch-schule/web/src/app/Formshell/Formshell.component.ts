@@ -6,6 +6,7 @@ import { NavigationComponent } from '../Navigation/Navigation.component';
 import { PersoenlichesComponent } from '../Steps/Person/Persoenliches.component';
 import { WohnortComponent } from '../Steps/Wohnort/Wohnort.component';
 import { Unter18Component } from '../Steps/Unter18/Unter18.component';
+import { AusbildungComponent } from '../Steps/Ausbildung/Ausbildung.component';
 
 @Component({
     imports: [
@@ -15,7 +16,8 @@ import { Unter18Component } from '../Steps/Unter18/Unter18.component';
         NavigationComponent,
         PersoenlichesComponent,
         WohnortComponent,
-        Unter18Component
+        Unter18Component,
+        AusbildungComponent
     ],
     selector: 'app-root',
     templateUrl: './Formshell.component.html',

@@ -17,7 +17,7 @@ export class NavigationComponent {
     }
 
     scrollToUnter18() {
-        const element = document.getElementById('uneter18-section');
+        const element = document.getElementById('unter18-section');
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
         }
