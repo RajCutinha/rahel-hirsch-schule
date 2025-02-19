@@ -25,7 +25,7 @@ import { BestaetigungComponent } from '../Steps/Bestaetigung/Bestaetigung.compon
     ],
     selector: 'app-root',
     templateUrl: './Formshell.component.html',
-    styleUrl: './Formshell.component.css'
+    styleUrl: './Formshell.component.scss'
 })
 export class FormshellComponent {
     title = 'rahel-hirsch-schule-web';
