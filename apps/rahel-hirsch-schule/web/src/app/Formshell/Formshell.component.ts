@@ -7,6 +7,8 @@ import { PersoenlichesComponent } from '../Steps/Person/Persoenliches.component'
 import { WohnortComponent } from '../Steps/Wohnort/Wohnort.component';
 import { Unter18Component } from '../Steps/Unter18/Unter18.component';
 import { AusbildungComponent } from '../Steps/Ausbildung/Ausbildung.component';
+import { SchulbesuchComponent } from '../Steps/Schulbesuch/Schulbesuch.component';
+import { BestaetigungComponent } from '../Steps/Bestaetigung/Bestaetigung.component';
 
 @Component({
     imports: [
@@ -17,11 +19,13 @@ import { AusbildungComponent } from '../Steps/Ausbildung/Ausbildung.component';
         PersoenlichesComponent,
         WohnortComponent,
         Unter18Component,
-        AusbildungComponent
+        AusbildungComponent,
+        SchulbesuchComponent,
+        BestaetigungComponent
     ],
     selector: 'app-root',
     templateUrl: './Formshell.component.html',
-    styleUrl: './Formshell.component.css'
+    styleUrl: './Formshell.component.scss'
 })
 export class FormshellComponent {
     title = 'rahel-hirsch-schule-web';

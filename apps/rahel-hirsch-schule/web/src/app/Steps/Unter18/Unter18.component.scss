@@ -9,6 +9,7 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
   margin-right: 2%;
   margin-bottom: 1%;
 }
@@ -22,13 +23,22 @@ p{
 }
 
 
-#handynummer{
+#telMutter{
   width: 100%;
 }
-#email{
+#talVater{
   width: 100%;
 }
-#telefon{
+#elternAdresse{
+  width: 100%;
+}
+#erzieherVorname{
+  width: 100%;
+}
+#erzieherNachname{
+  width: 50%;
+}
+#erzieherTelefon{
   width: 100%;
 }
 
