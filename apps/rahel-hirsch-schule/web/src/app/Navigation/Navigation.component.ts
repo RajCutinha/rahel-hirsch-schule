@@ -6,7 +6,7 @@ import { ButtonModule } from 'primeng/button';
     imports: [RouterModule, ButtonModule],
     selector: 'app-navigation',
     templateUrl: './Navigation.component.html',
-    styleUrl: './Navigation.component.css'
+    styleUrl: './Navigation.component.scss'
 })
 export class NavigationComponent {
     scrollToWohnort() {

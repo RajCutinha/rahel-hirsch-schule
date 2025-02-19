@@ -7,6 +7,6 @@ import { InputTextModule } from 'primeng/inputtext';
     imports: [RouterModule, ButtonModule, InputTextModule],
     selector: 'app-wohnort',
     templateUrl: './Wohnort.component.html',
-    styleUrl: './Wohnort.component.css'
+    styleUrl: './Wohnort.component.scss'
 })
 export class WohnortComponent {}

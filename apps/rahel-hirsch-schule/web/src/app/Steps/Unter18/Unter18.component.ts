@@ -7,6 +7,6 @@ import { InputTextModule } from 'primeng/inputtext';
     imports: [RouterModule, ButtonModule, InputTextModule],
     selector: 'app-unter18',
     templateUrl: './Unter18.component.html',
-    styleUrl: './Unter18.component.css'
+    styleUrl: './Unter18.component.scss'
 })
 export class Unter18Component {}
