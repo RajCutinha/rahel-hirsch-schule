@@ -6,6 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  @Input() title: string =
+  @Input() title =
     'Anmeldung zur Ausbildung als MFA / ZFA an der Rahel-Hirsch-Schule';
 }
