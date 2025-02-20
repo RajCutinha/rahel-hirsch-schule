@@ -1,116 +1,106 @@
-<div class="form-background mx-auto">
-    <div class="form-title mx-auto">
-        Ausbildungsdaten
-    </div>
+<div id=ausbildung-section class="form-background mx-auto">
+    <div class="form-title mx-auto">Ausbildungsdaten</div>
     <div class="container">
-        <div class="input-container">
-            <label for="ausbildunsAnmeldung">Ich melde mich an zur Ausbildung als<span
-                    class="required mx-0">*</span></label>
-            <div class="Fach-radio">
-
-                <label for=""></label><input type="radio" id="zahnmedizin" name="zahnmedizin"><span
-                    class="fach">Zahnmediziniche/r
-                    Fachangestellte/r (ZFA)</span>
-                <input type="radio" id="medizin" name="medizin"><span class="fach">Medizinische/r
-                    Fachangestellte(MFA)</span>
+        <div>
+            <label for="fachrichtung">Ich melde mich an zur Ausbildung als<span class="required">*</span></label>
+        </div>
+        <div class="fachrichtung-radio">
+            <div class="div-fachrichtung">
+                <input type="radio" id="zfa" name="fachrichtung" /><span class="span-fachrichtung"
+                    >Zahnmediziniche/r Fachangestellte/r (ZFA)</span
+                >
+            </div>
+            <div class="div-fachrichtung">
+                <input type="radio" id="mfa" name="fachrichtung" /><span class="span-fachrichtung"
+                    >Medizinische/r Fachangestellte(MFA)</span
+                >
             </div>
         </div>
     </div>
     <div class="container">
         <div class="input-container">
             <label for="betriebName">Name Ausbildungsbetrieb<span class="required">*</span></label>
-            <input type="text" id="betriebName">
+            <input type="text" id="betriebName" />
         </div>
-        <div class="input-container">
-        </div>
+        <div class="input-container"></div>
     </div>
     <div class="container">
         <div class="input-container">
             <label for="betriebStraße">Straße Ausbildungsbetrieb<span class="required">*</span></label>
-            <input type="text" id="betriebStraße">
+            <input type="text" id="betriebStraße" />
         </div>
         <div class="input-container">
             <label for="betriebHausnummer">Hausnummer Ausbildungsbetrieb<span class="required">*</span></label>
-            <input type="text" id="betriebHausnummer">
+            <input type="text" id="betriebHausnummer" />
         </div>
     </div>
     <div class="container">
         <div class="input-container">
             <label for="ansprechspartner">Ansprechspartner im Ausbildungsbetrieb<span class="required">*</span></label>
-            <div class="input-details">
-                <input type="text" id="ansprechspartner">
-            </div>
+            <input type="text" id="ansprechspartner" />
         </div>
         <div class="input-container">
             <label for="telBetrieb">Telefon Ausbildungsbetrieb<span class="required">*</span></label>
-            <div class="input-details">
-                <input type="text" id="telBetrieb">
-            </div>
+            <input type="text" id="telBetrieb" />
         </div>
     </div>
     <div class="container">
         <div class="input-container">
             <label for="betriebFax">Fax Ausbildungsbetrieb<span class="required">*</span></label>
-            <div class="input-details">
-                <input type="text" id="betriebFax">
-            </div>
+            <input type="text" id="betriebFax" />
         </div>
         <div class="input-container">
             <label for="betriebEmil">E-Mail Ausbildungsbetrieb<span class="required">*</span></label>
-            <div class="input-details">
-                <input type="text" id="betriebEmil">
-            </div>
+            <input type="text" id="betriebEmil" />
         </div>
     </div>
-    <div class="container">
-        <div class="input-container">
-            <label for="schultagewunsch">Schultagewunsch</label>
-            <div class="input-details">
-                <div class="check-with-text d-flex">
-                    <input type="checkbox" class="check-detail" id="zustimmung">
+    <div class="container" id="schultagewunsch">
+        <label for="schultagewunsch" id="schultagewunsch">Schultagewunsch</label>
+        <div class="input-details">
+            <div class="schultagewunsch">
+                <div class="check-with-text">
+                    <input type="checkbox" class="check-detail" id="zustimmung" />
                     <span for="zustimmung" class="zustimmung">Mo/Di</span>
                 </div>
-                <div class="check-with-text d-flex">
-                    <input type="checkbox" class="check-detail" id="zustimmung">
+                <div class="check-with-text">
+                    <input type="checkbox" class="check-detail" id="zustimmung" />
                     <span for="zustimmung" class="zustimmung">Di/Mi</span>
                 </div>
-                <div class="check-with-text d-flex">
-                    <input type="checkbox" class="check-detail" id="zustimmung">
+                <div class="check-with-text">
+                    <input type="checkbox" class="check-detail" id="zustimmung" />
                     <span for="zustimmung" class="zustimmung">Di/Fr</span>
                 </div>
-                <div class="check-with-text d-flex">
-                    <input type="checkbox" class="check-detail" id="zustimmung">
+                <div class="check-with-text">
+                    <input type="checkbox" class="check-detail" id="zustimmung" />
                     <span for="zustimmung" class="zustimmung">Mo/Do</span>
                 </div>
-                <div class="check-with-text d-flex">
-                    <input type="checkbox" class="check-detail" id="zustimmung">
+                <div class="check-with-text">
+                    <input type="checkbox" class="check-detail" id="zustimmung" />
                     <span for="zustimmung" class="zustimmung">Mo/Fr</span>
                 </div>
-                <div class="check-with-text d-flex">
-                    <input type="checkbox" class="check-detail" id="zustimmung">
+                <div class="check-with-text">
+                    <input type="checkbox" class="check-detail" id="zustimmung" />
                     <span for="zustimmung" class="zustimmung">Mo/Mi</span>
                 </div>
-                <div class="check-with-text d-flex">
-                    <input type="checkbox" class="check-detail" id="zustimmung">
+                <div class="check-with-text">
+                    <input type="checkbox" class="check-detail" id="zustimmung" />
                     <span for="zustimmung" class="zustimmung">Do/Fr</span>
                 </div>
-                <div class="check-with-text d-flex">
-                    <input type="checkbox" class="check-detail" id="zustimmung">
+                <div class="check-with-text">
+                    <input type="checkbox" class="check-detail" id="zustimmung" />
                     <span for="zustimmung" class="zustimmung">Mi/Do</span>
                 </div>
-                <p id="zustimmung">Wählen Sie bitte eine Kombination aus, an denen die Praxis Sie für die Berufsschule
-                    bevorzugt freistellen möchte</p>
             </div>
-        </div>
-        <div class="input-container">
+            <p>
+                Wählen Sie bitte eine Kombination aus, an denen die Praxis Sie für die Berufsschule bevorzugt
+                freistellen möchte
+            </p>
         </div>
     </div>
     <div class="container">
-        <div class="input-container">
-            <label for="vertragHochladen">Ausbildungsvertrag hochladen</label>
-        </div>
-        <div class="input-container">
-            <p-button label="hochladen" class="nav-button" />
+        <div class="input-group">
+            <label for="vertragHochladen" id="vertragHochladen">Ausbildungsvertrag hochladen</label>
+            <p-button label="Hochladen" class="senden-button" />
         </div>
     </div>
 </div>
