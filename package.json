@@ -2,7 +2,7 @@
     "name": "rahel-hirsch.schule",
     "version": "0.0.0",
     "scripts": {
-        "start": "concurrently --names rahel-web,rahel-api -c #f87171,#64748b \"nx run rahel-hirsch-schule-web:serve\" \"nx run rahel-hirsch-schule-api:serve\"",
+        "start": "concurrently --names \"rahel-web,rahel-api\" -c \"#f87171,#64748b\" \"nx run rahel-hirsch-schule-web:serve\" \"nx run rahel-hirsch-schule-api:serve\"",
         "rahel:web": "nx run rahel-hirsch-schule-web:serve",
         "rahel:api": "nx run rahel-hirsch-schule-api:serve",
         "rahel:db-generate": "drizzle-kit generate",
@@ -73,5 +73,6 @@
         "typescript": "~5.6.2",
         "typescript-eslint": "^8.13.0",
         "webpack-cli": "^5.1.4"
-    }
+    },
+    "packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af"
 }
