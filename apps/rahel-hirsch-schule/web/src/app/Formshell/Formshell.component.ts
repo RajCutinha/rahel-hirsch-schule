@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
+
 import { RouterModule } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { HeaderComponent } from './Header/Header.component';
@@ -21,12 +23,81 @@ import { BestaetigungComponent } from '../Steps/Bestaetigung/Bestaetigung.compon
         Unter18Component,
         AusbildungComponent,
         SchulbesuchComponent,
-        BestaetigungComponent
+        BestaetigungComponent,
+        ReactiveFormsModule
     ],
     selector: 'app-root',
     templateUrl: './Formshell.component.html',
     styleUrl: './Formshell.component.scss'
 })
 export class FormshellComponent {
-    title = 'rahel-hirsch-schule-web';
+    registrationForm = new FormGroup({
+      person: new FormGroup({
+        firstname: new FormControl('', Validators.required),
+        lastname: new FormControl('', Validators.required),
+        gender: new FormControl('', Validators.required),
+        birthday: new FormControl('', Validators.required),
+        nationality: new FormControl('', Validators.required),
+        countryofBirth: new FormControl('', Validators.required),
+        birthplace: new FormControl('', Validators.required),
+        adult: new FormControl(''),
+        phoneNumber: new FormControl(''),
+        telephone: new FormControl(''),
+        email: new FormControl(''),
+        pictureOk: new FormControl(''),
+        originLanguage: new FormControl('')
+      }),
+      personPlace: new FormGroup({
+        postcode: new FormControl('', Validators.required),
+        place: new FormControl('', Validators.required),
+        street: new FormControl('', Validators.required),
+        housenumber: new FormControl('', Validators.required),
+        doorbellName: new FormControl('', Validators.required),
+        landlord: new FormControl('', Validators.required),
+      }),
+      emergencyContact: new FormGroup({
+        name: new FormControl(''),
+        phoneNumber: new FormControl(''),
+      }),
+      mother: new FormGroup({
+        firstname: new FormControl(''),
+        lastname: new FormControl(''),
+        telephone: new FormControl(''),
+      }),
+      father: new FormGroup({
+        firstname: new FormControl(''),
+        lastname: new FormControl(''),
+        telephone: new FormControl(''),
+      }),
+      guardianAddress: new FormControl(''),
+      guardian: new FormGroup({
+        firstname: new FormControl(''),
+        lastname: new FormControl(''),
+        telephone: new FormControl('')
+      }),
+      employer: new FormGroup({
+        name: new FormControl('', Validators.required),
+        street: new FormControl('', Validators.required),
+        streetNumber: new FormControl('', Validators.required),
+        contactPerson: new FormControl('', Validators.required),
+        email: new FormControl('', [Validators.required, Validators.email]),
+        phoneNumber: new FormControl('', Validators.required),
+        faxNumber: new FormControl('', Validators.required),
+        employerType: new FormControl(''),
+      }),
+      schooldays: new FormControl<string[]>([], Validators.required),
+      contractFile: new FormControl<File | null>(null, Validators.required),
+      education: new FormGroup({
+        degree: new FormControl('', Validators.required),
+        lastSchool: new FormControl(''),
+        graduationYear: new FormControl('', Validators.required),
+        graduationType: new FormControl('', Validators.required),
+        graduationTraining: new FormControl(''),
+        newMember: new FormControl(''),
+    })
+  })
+
+  registrationSubmit() {
+    console.log(this.registrationForm.value);
+  }
 }
