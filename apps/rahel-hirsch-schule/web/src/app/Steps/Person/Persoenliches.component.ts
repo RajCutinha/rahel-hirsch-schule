@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { ControlContainer, ReactiveFormsModule, FormGroup } from '@angular/forms';
-import { RouterModule } from '@angular/router';
 
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 
 @Component({
-  imports: [RouterModule, ButtonModule, InputTextModule, ReactiveFormsModule],
+  imports: [ButtonModule, InputTextModule, ReactiveFormsModule],
   selector: 'app-persoenliches',
   templateUrl: './Persoenliches.component.html',
   styleUrl: './Persoenliches.component.scss'
