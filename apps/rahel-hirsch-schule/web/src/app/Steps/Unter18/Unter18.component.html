@@ -1,82 +1,78 @@
 <div id="unter 18?-section" class="form-background mx-auto">
-    <div class="form-title mx-auto">
-        Unter 18 Daten
-    </div>
-    <div class="container">
+    <div class="form-title mx-auto">Unter 18 Daten</div>
+    <div class="container" [formGroup]="motherForm">
         <div class="input-container">
             <label for="vornameMutter">Vorname Mutter</label>
-            <input type="text" id="vornameMutter">
+            <input type="text" id="vornameMutter" formControlName="firstname" />
         </div>
         <div class="input-container">
             <label for="nachnameMutter">Nachname Mutter</label>
-            <input type="text" id="NachnameMutter">
+            <input type="text" id="nachnameMutter" formControlName="lastname" />
         </div>
     </div>
-    <div class="container">
+    <div class="container" [formGroup]="motherForm">
         <div class="input-container">
             <label for="telMutter">Telefon Mutter</label>
             <div class="input-details">
-                <input type="text" id="telMutter">
+                <input type="text" id="telMutter" formControlName="telephone" />
                 <p id="details">Die Kontaktdaten Ihrer Mutter</p>
             </div>
         </div>
-        <div class="input-container">
-        </div>
+        <div class="input-container"></div>
     </div>
-    <div class="container">
+    <div class="container" [formGroup]="fatherForm">
         <div class="input-container">
             <label for="vornameVater">Vorname Vater</label>
-            <input type="text" id="vornameVater">
+            <input type="text" id="vornameVater" formControlName="firstname" />
         </div>
         <div class="input-container">
             <label for="nachnameVater">Nachname Vater</label>
-            <input type="text" id="nachnameVater">
+            <input type="text" id="nachnameVater" formControlName="lastname" />
         </div>
     </div>
-    <div class="container">
+    <div class="container" [formGroup]="fatherForm">
         <div class="input-container">
             <label for="telVater">Telefon Vater</label>
             <div class="input-details">
-                <input type="text" id="telMutter">
+                <input type="text" id="telVater" formControlName="telephone" />
                 <p id="details">Die Kontaktdaten Ihres Vaters</p>
             </div>
         </div>
-        <div class="input-container">
-        </div>
+        <div class="input-container"></div>
     </div>
     <div class="container">
         <div class="input-container">
             <label for="elternAdresse">Adresse Mutter-Vater</label>
-            <div class="input-details">
-                <input type="text" id="elternAdresse">
-                <p id="details">Falls Ihre Mutter oder Ihr Vater eine abweichende Adresse hat, diese bitte hier angeben.</p>
+            <div class="input-details" [formGroup]="parentForm">
+                <input type="text" id="elternAdresse" [formControl]="guardianAddressControl" />
+                <p id="details">
+                    Falls Ihre Mutter oder Ihr Vater eine abweichende Adresse hat, diese bitte hier angeben.
+                </p>
             </div>
         </div>
-        <div class="input-container">
-        </div>
+        <div class="input-container"></div>
     </div>
-    <div class="container">
+    <div class="container" [formGroup]="guardianForm">
         <div class="input-container">
             <label for="erzieherVorname">Vorname Erziehungsberechtigter</label>
             <div class="input-details">
-                <input type="text" id="erzieherVorname">
+                <input type="text" id="erzieherVorname" formControlName="firstname" />
                 <p id="details">Wenn nicht die Eltern</p>
             </div>
         </div>
         <div class="input-container">
             <label for="erzieherNachname">Nachname Erziehungsberechtigter</label>
-            <input type="text" id="erzieherNachname">
+            <input type="text" id="erzieherNachname" formControlName="lastname" />
         </div>
     </div>
-    <div class="container">
+    <div class="container" [formGroup]="guardianForm">
         <div class="input-container">
             <label for="erzieherTelefon">Telefon Erziehungsberechtigter</label>
             <div class="input-details">
-                <input type="text" id="erzieherTelefon">
+                <input type="text" id="erzieherTelefon" formControlName="telephone" />
                 <p id="details">Wenn nicht die Eltern</p>
             </div>
         </div>
-        <div class="input-container">
-        </div>
+        <div class="input-container"></div>
     </div>
 </div>
