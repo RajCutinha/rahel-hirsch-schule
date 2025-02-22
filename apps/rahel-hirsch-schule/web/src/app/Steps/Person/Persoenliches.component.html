@@ -1,95 +1,99 @@
-<div id="persönliches-section" class="form-background mx-auto">
-    <div class="form-title mx-auto">
-        Persönliche Daten
+<div id="persönliches-section" class="form-background mx-auto" [formGroup]="personForm">
+    <div class="form-title mx-auto">Persönliche Daten</div>
+    <div class="container">
+        <div class="input-container">
+            <label for="vorname">Vorname<span class="required">*</span></label>
+            <input type="text" id="vorname" formControlName="firstname" />
+        </div>
+        <div class="input-container">
+            <label for="nachname">Nachname<span class="required">*</span></label>
+            <input type="text" id="nachname" formControlName="lastname" />
+        </div>
     </div>
     <div class="container">
         <div class="input-container">
-          <label for="vorname">Vorname<span class="required">*</span></label>
-          <input type="text" id="vorname">
-        </div>
-        <div class="input-container">
-          <label for="nachname">Nachname<span class="required">*</span></label>
-          <input type="text" id="nachname">
-        </div>
-      </div>
-      <div class="container">
-        <div class="input-container">
-          <label for="geschlecht">Geschlecht<span class="required">*</span></label>
-          <div class="gender-radio">
-            <input type="radio" id="männlich" name="geschlecht"><span class="gender">männlich</span>
-            <input type="radio" id="weiblich" name="geschlecht"><span class="gender">weiblich</span>
-            <input type="radio" id="divers" name="geschlecht"><span class="gender">divers</span>
-          </div>
-        </div>
-        <div class="input-container">
-          <label for="nachname">Herkunftssprache der Eltern</label>
-          <input type="text" id="nachname">
-        </div>
-      </div>
-      <div class="container">
-        <div class="input-container">
-          <label for="vorname">Geboren am<span class="required">*</span></label>
-          <input type="date" id="vorname">
-        </div>
-        <div class="input-container">
-          <label for="nachname">Geburtsort<span class="required">*</span></label>
-          <input type="text" id="nachname">
-        </div>
-      </div>
-      <div class="container">
-        <div class="input-container">
-          <label for="vorname">Geburtsland<span class="required">*</span></label>
-          <input type="text" id="vorname">
-        </div>
-        <div class="input-container">
-          <label for="nachname">Staatsangehörigkeit<span class="required">*</span></label>
-          <input type="text" id="nachname">
-        </div>
-      </div>
-      <div class="container">
-        <div class="input-container">
-          <label for="handynummer">Handynummer</label>
-          <div class="input-details">
-            <input type="text" id="handynummer">
-            <p id="details">Bitte geben Sie in jedem Fall eine Handy- oder Telefonnummer an.</p>
-          </div>
-        </div>
-        <div class="input-container">
-          <label for="nachname">Telefon</label>
-          <div class="input-details">
-            <input type="text" id="telefon">
-            <p id="telefon">Bitte geben Sie in jedem Fall eine Handy- oder Telefonnummer an.</p>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="input-container">
-          <label for="vorname">Ihre E-Mail</label>
-          <div class="input-details">
-            <input type="text" id="email">
-            <p id="email">Wenn Sie eine eigene Mailadresse angeben, senden wir Ihnen eine Kopie der Anmeldung als E-Mail.</p>
-          </div>
-        </div>
-        <div class="input-container">
-          <label for="minor">Ich bin unter 18</label>
-          <div class="check">
-            <input type="checkbox" id="minor">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="input-container">
-          <label for="zustimmung">Zustimmung zur
-            Verwendung von Fotos</label>
-          <div class="input-details">
-            <div class="check-with-text d-flex">
-              <input type="checkbox" class="check-detail" id="zustimmung">
-              <span for="zustimmung" class="zustimmung">Ja, die Rahel-Hirsch-Schule darf Fotos von mir Verwenden</span>
+            <label for="geschlecht">Geschlecht<span class="required">*</span></label>
+            <div class="gender-radio">
+                <input type="radio" id="männlich" name="gender" value="männlich" formControlName="gender" /><span class="gender">männlich</span>
+                <input type="radio" id="weiblich" name="gender" value="weiblich" formControlName="gender" /><span class="gender">weiblich</span>
+                <input type="radio" id="divers" name="gender" value="divers" formControlName="gender" /><span class="gender">divers</span>
             </div>
-            <p id="zustimmung">Ich erteile hiermit der Rahel-Hirsch-Schule die jederzeit widerrufliche Erlaubnis, für schulische Zwecke (z.B. auf der Webseite der Schule, in Schulbroschüren, etc.) Fotos oder Abbildungen, auf denen ich zu erkennen bin, zu verwenden.</p>
-          </div>
         </div>
-        <div class="input-container">        
+        <div class="input-container">
+            <label for="herkuntssprache">Herkunftssprache der Eltern</label>
+            <input type="text" id="herkuntssprache" formControlName="originLanguage" />
         </div>
-      </div>
+    </div>
+    <div class="container">
+        <div class="input-container">
+            <label for="vorname">Geboren am<span class="required">*</span></label>
+            <input type="date" id="vorname" formControlName="birthday" />
+        </div>
+        <div class="input-container">
+            <label for="nachname">Geburtsort<span class="required">*</span></label>
+            <input type="text" id="nachname" formControlName="birthplace" />
+        </div>
+    </div>
+    <div class="container">
+        <div class="input-container">
+            <label for="vorname">Geburtsland<span class="required">*</span></label>
+            <input type="text" id="vorname" formControlName="countryofBirth" />
+        </div>
+        <div class="input-container">
+            <label for="nachname">Staatsangehörigkeit<span class="required">*</span></label>
+            <input type="text" id="nachname" formControlName="nationality" />
+        </div>
+    </div>
+    <div class="container">
+        <div class="input-container">
+            <label for="handynummer">Handynummer</label>
+            <div class="input-details">
+                <input type="text" id="handynummer" formControlName="phoneNumber" />
+                <p id="details">Bitte geben Sie in jedem Fall eine Handy- oder Telefonnummer an.</p>
+            </div>
+        </div>
+        <div class="input-container">
+            <label for="nachname">Telefon</label>
+            <div class="input-details">
+                <input type="text" id="telefon" formControlName="telephone" />
+                <p id="telefon">Bitte geben Sie in jedem Fall eine Handy- oder Telefonnummer an.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="input-container">
+            <label for="vorname">Ihre E-Mail</label>
+            <div class="input-details">
+                <input type="text" id="email" formControlName="email" />
+                <p id="email">
+                    Wenn Sie eine eigene Mailadresse angeben, senden wir Ihnen eine Kopie der Anmeldung als E-Mail.
+                </p>
+            </div>
+        </div>
+        <div class="input-container">
+            <label for="minor">Ich bin unter 18</label>
+            <div class="check">
+                <input type="checkbox" id="minor" formControlName="adult" />
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="input-container">
+            <label for="zustimmung">Zustimmung zur Verwendung von Fotos</label>
+            <div class="input-details">
+                <div class="check-with-text d-flex">
+                    <input type="checkbox" class="check-detail" id="zustimmung" formControlName="pictureOk" />
+                    <span for="zustimmung" class="zustimmung"
+                        >Ja, die Rahel-Hirsch-Schule darf Fotos von mir Verwenden</span
+                    >
+                </div>
+                <p id="zustimmung">
+                    Ich erteile hiermit der Rahel-Hirsch-Schule die jederzeit widerrufliche Erlaubnis, für schulische
+                    Zwecke (z.B. auf der Webseite der Schule, in Schulbroschüren, etc.) Fotos oder Abbildungen, auf
+                    denen ich zu erkennen bin, zu verwenden.
+                </p>
+            </div>
+        </div>
+        <div class="input-container"></div>
+    </div>
 </div>
