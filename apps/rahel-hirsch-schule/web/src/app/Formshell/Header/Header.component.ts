@@ -2,8 +2,8 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+  templateUrl: './Header.component.html',
+  styleUrls: ['./Header.component.scss'],
 })
 export class HeaderComponent {
   @Input() title =
