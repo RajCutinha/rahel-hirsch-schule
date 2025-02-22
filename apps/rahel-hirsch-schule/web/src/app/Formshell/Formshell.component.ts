@@ -43,7 +43,7 @@ export class FormshellComponent {
         adult: new FormControl(''),
         phoneNumber: new FormControl(''),
         telephone: new FormControl(''),
-        email: new FormControl(''),
+        email: new FormControl('', Validators.email),
         pictureOk: new FormControl(''),
         originLanguage: new FormControl('')
       }),
@@ -94,6 +94,9 @@ export class FormshellComponent {
         graduationType: new FormControl('', Validators.required),
         graduationTraining: new FormControl(''),
         newMember: new FormControl(''),
+    }),
+    confirmation: new FormGroup({
+      consent: new FormControl(false, Validators.requiredTrue)
     })
   })
 

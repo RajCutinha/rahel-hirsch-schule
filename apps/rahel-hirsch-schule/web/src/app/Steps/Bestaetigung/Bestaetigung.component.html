@@ -1,4 +1,4 @@
-<div id=datenschutz-section class="form-background mx-auto">
+<div id=datenschutz-section class="form-background mx-auto" [formGroup]="confirmationForm">
     <div class="form-title mx-auto">
         Datenschutzerklärung und Bestätigung
     </div>
@@ -14,11 +14,11 @@
       <div class="container">
         <div class="input-container">
             <label for="zustimmung">Datenspeicherung<span class="required">*</span></label>
-            <input type="checkbox" id="zustimmung">
+            <input type="checkbox" id="zustimmung" formControlName="consent">
             <span for="zustimmung" class="zustimmung">Ich nehme die Datenschutzerklärung zur Kenntnis und willige in die elektronische Datenverarbeitung</span>
         </div>
       </div>
       <div class="btn-container">
-        <p-button label="Formular senden" class="senden-button" />
+        <p-button type="submit" label="Formular senden" class="senden-button" />
       </div>
 </div>
