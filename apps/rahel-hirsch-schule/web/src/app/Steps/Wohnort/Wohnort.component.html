@@ -2,49 +2,49 @@
     <div class="form-title mx-auto">
         Wohnort Daten
     </div>
-    <div class="container">
+    <div class="container" [formGroup]="personPlaceForm">
         <div class="input-container">
             <label for="plz">Postleitzahl<span class="required">*</span></label>
-            <input type="text" id="plz">
+            <input type="text" id="plz" formControlName="postcode">
         </div>
         <div class="input-container">
             <label for="wohnort">Wohnort<span class="required">*</span></label>
-            <input type="text" id="wohnort">
+            <input type="text" id="wohnort" formControlName="place">
         </div>
     </div>
-    <div class="container">
+    <div class="container" [formGroup]="personPlaceForm">
         <div class="input-container">
             <label for="straße">Straße<span class="required">*</span></label>
-            <input type="text" id="straße">
+            <input type="text" id="straße" formControlName="street">
         </div>
         <div class="input-container">
             <label for="hausnummer">Hausnummer<span class="required">*</span></label>
-            <input type="text" id="hausnummer">
+            <input type="text" id="hausnummer" formControlName="housenumber">
         </div>
     </div>
-    <div class="container">
+    <div class="container" [formGroup]="personPlaceForm">
         <div class="input-container">
             <label for="wohnebei">Ich wohne bei</label>
             <div class="input-details">
-                <input type="text" id="wohnebei">
+                <input type="text" id="wohnebei" formControlName="doorbellName">
                 <p id="details">Falls Ihr Nachname nicht "am Klingelschield steht", geben Sie bitte den Namen des Wohnungseigentümers an.</p>
-              </div>          
+              </div>
         </div>
         <div class="input-container">
         </div>
     </div>
-    <div class="container">
+    <div class="container" [formGroup]="emergencyContactForm">
         <div class="input-container">
             <label for="notfallkontakt">Wer soll im Notfall verständigt werden</label>
-            <input type="text" id="notfallkontakt">
+            <input type="text" id="notfallkontakt" formControlName="name">
         </div>
         <div class="input-container">
         </div>
     </div>
-    <div class="container">
+    <div class="container" [formGroup]="emergencyContactForm">
         <div class="input-container">
             <label for="telefon-notfall">Telefon von Notfallkontakt</label>
-            <input type="text" id="telefon-notfall">
+            <input type="text" id="telefon-notfall" formControlName="phoneNumber">
         </div>
         <div class="input-container">
         </div>
