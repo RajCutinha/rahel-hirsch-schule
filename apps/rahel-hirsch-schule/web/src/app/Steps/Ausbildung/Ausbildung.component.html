@@ -1,95 +1,71 @@
-<div id=ausbildung-section class="form-background mx-auto">
+<div id="ausbildung-section" class="form-background mx-auto">
     <div class="form-title mx-auto">Ausbildungsdaten</div>
     <div class="container">
         <div>
             <label for="fachrichtung">Ich melde mich an zur Ausbildung als<span class="required">*</span></label>
         </div>
-        <div class="fachrichtung-radio">
+        <div class="fachrichtung-radio" [formGroup]="employerForm">
             <div class="div-fachrichtung">
-                <input type="radio" id="zfa" name="fachrichtung" /><span class="span-fachrichtung"
-                    >Zahnmediziniche/r Fachangestellte/r (ZFA)</span
-                >
+                <input type="radio" id="zfa" name="employerType" value="zfa" formControlName="employerType" />
+                <span class="span-fachrichtung">Zahnmedizinische/r Fachangestellte/r (ZFA)</span>
             </div>
             <div class="div-fachrichtung">
-                <input type="radio" id="mfa" name="fachrichtung" /><span class="span-fachrichtung"
-                    >Medizinische/r Fachangestellte(MFA)</span
-                >
+                <input type="radio" id="mfa" name="employerType" value="mfa" formControlName="employerType" />
+                <span class="span-fachrichtung">Medizinische/r Fachangestellte/r (MFA)</span>
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container" [formGroup]="employerForm">
         <div class="input-container">
             <label for="betriebName">Name Ausbildungsbetrieb<span class="required">*</span></label>
-            <input type="text" id="betriebName" />
+            <input type="text" id="betriebName" formControlName="employerName" />
         </div>
         <div class="input-container"></div>
     </div>
-    <div class="container">
+    <div class="container" [formGroup]="employerForm">
         <div class="input-container">
             <label for="betriebStraße">Straße Ausbildungsbetrieb<span class="required">*</span></label>
-            <input type="text" id="betriebStraße" />
+            <input type="text" id="betriebStraße" formControlName="employerStreet" />
         </div>
         <div class="input-container">
             <label for="betriebHausnummer">Hausnummer Ausbildungsbetrieb<span class="required">*</span></label>
-            <input type="text" id="betriebHausnummer" />
+            <input type="text" id="betriebHausnummer" formControlName="employerStreetNumber" />
         </div>
     </div>
-    <div class="container">
+    <div class="container" [formGroup]="employerForm">
         <div class="input-container">
-            <label for="ansprechspartner">Ansprechspartner im Ausbildungsbetrieb<span class="required">*</span></label>
-            <input type="text" id="ansprechspartner" />
+            <label for="ansprechspartner">Ansprechpartner im Ausbildungsbetrieb<span class="required">*</span></label>
+            <input type="text" id="ansprechspartner" formControlName="employerContactPerson" />
         </div>
         <div class="input-container">
             <label for="telBetrieb">Telefon Ausbildungsbetrieb<span class="required">*</span></label>
-            <input type="text" id="telBetrieb" />
+            <input type="text" id="telBetrieb" formControlName="employerPhoneNumber" />
         </div>
     </div>
-    <div class="container">
+    <div class="container" [formGroup]="employerForm">
         <div class="input-container">
             <label for="betriebFax">Fax Ausbildungsbetrieb<span class="required">*</span></label>
-            <input type="text" id="betriebFax" />
+            <input type="text" id="betriebFax" formControlName="employerFaxNumber" />
         </div>
         <div class="input-container">
             <label for="betriebEmil">E-Mail Ausbildungsbetrieb<span class="required">*</span></label>
-            <input type="text" id="betriebEmil" />
+            <input type="text" id="betriebEmil" formControlName="employerEmail" />
         </div>
     </div>
     <div class="container" id="schultagewunsch">
         <label for="schultagewunsch" id="schultagewunsch">Schultagewunsch</label>
         <div class="input-details">
             <div class="schultagewunsch">
-                <div class="check-with-text">
-                    <input type="checkbox" class="check-detail" id="zustimmung" />
-                    <span for="zustimmung" class="zustimmung">Mo/Di</span>
-                </div>
-                <div class="check-with-text">
-                    <input type="checkbox" class="check-detail" id="zustimmung" />
-                    <span for="zustimmung" class="zustimmung">Di/Mi</span>
-                </div>
-                <div class="check-with-text">
-                    <input type="checkbox" class="check-detail" id="zustimmung" />
-                    <span for="zustimmung" class="zustimmung">Di/Fr</span>
-                </div>
-                <div class="check-with-text">
-                    <input type="checkbox" class="check-detail" id="zustimmung" />
-                    <span for="zustimmung" class="zustimmung">Mo/Do</span>
-                </div>
-                <div class="check-with-text">
-                    <input type="checkbox" class="check-detail" id="zustimmung" />
-                    <span for="zustimmung" class="zustimmung">Mo/Fr</span>
-                </div>
-                <div class="check-with-text">
-                    <input type="checkbox" class="check-detail" id="zustimmung" />
-                    <span for="zustimmung" class="zustimmung">Mo/Mi</span>
-                </div>
-                <div class="check-with-text">
-                    <input type="checkbox" class="check-detail" id="zustimmung" />
-                    <span for="zustimmung" class="zustimmung">Do/Fr</span>
-                </div>
-                <div class="check-with-text">
-                    <input type="checkbox" class="check-detail" id="zustimmung" />
-                    <span for="zustimmung" class="zustimmung">Mi/Do</span>
-                </div>
+                @for (day of schooldays; track day.value) {
+                    <div class="check-with-text">
+                        <input type="checkbox"
+                               [id]="day.value"
+                               [value]="day.value"
+                               [checked]="schooldaysControl.value?.includes(day.value)"
+                               (change)="updateSchooldays($event)">
+                        <span class="zustimmung">{{ day.label }}</span>
+                    </div>
+                }
             </div>
             <p>
                 Wählen Sie bitte eine Kombination aus, an denen die Praxis Sie für die Berufsschule bevorzugt
@@ -97,10 +73,13 @@
             </p>
         </div>
     </div>
-    <div class="container">
+    <div class="container" [formGroup]="parentForm">
         <div class="input-group">
             <label for="vertragHochladen" id="vertragHochladen">Ausbildungsvertrag hochladen</label>
-            <p-button label="Hochladen" class="senden-button" />
+            <input type="file"
+                   id="vertragHochladen"
+                   (change)="onFileUpload($event)"
+                   #fileInput>
         </div>
     </div>
 </div>
