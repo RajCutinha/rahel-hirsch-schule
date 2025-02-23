@@ -2,14 +2,13 @@
     <app-header title="Anmeldung zur Ausbildung als MFA / ZFA an der Rahel-Hirsch-Schule"></app-header>
     <app-navigation></app-navigation>
     <div class="components">
-        <form [formGroup]="registrationForm" (ngSubmit)="registrationSubmit()">
+        <form [formGroup]="registrationForm" (ngSubmit)="registrationSubmit()" class="flex flex-col gap-8">
             <app-persoenliches />
             <app-wohnort />
             <app-unter18 />
             <app-ausbildung />
             <app-schulbesuch />
             <app-bestaetigung />
-            <button type="submit">Anmelden</button>
         </form>
     </div>
 </div>
