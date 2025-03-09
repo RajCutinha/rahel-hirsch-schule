@@ -21,8 +21,7 @@
             "input": "apps/rahel-hirsch-schule/web/public"
           }
         ],
-        "styles": ["apps/rahel-hirsch-schule/web/src/styles.scss"],
-        "scripts": []
+        "styles": ["apps/rahel-hirsch-schule/web/src/styles.css"]
       },
       "configurations": {
         "production": {

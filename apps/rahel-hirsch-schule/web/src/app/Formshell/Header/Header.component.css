@@ -1,0 +1,87 @@
+.header {
+    width: 100%;
+    background-color: #00628A;
+    padding: 8px 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+} 
+
+.header-content {
+    width: 100%;
+    max-width: 1180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+   
+}
+
+.logo-container {
+   flex: 10%; /*  1 1 auto; */
+}
+
+.logo-container img {
+    max-width: 100%;
+    height: auto;
+    margin-left: 30px;
+}
+
+.title-container {
+    flex: 1 1 auto;
+    overflow: hidden; 
+    white-space: nowrap;  
+}
+
+.title-container h1 {
+    color: white;
+    font-size: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: max-content;
+    /* text-overflow: ellipsis; Add ellipsis if text overflows */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .title-container h1 {
+        font-size: 0.9375rem;
+    }
+
+    .logo-container img {
+        max-width: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title-container h1 {
+        font-size: 0.9200rem;
+    }
+
+    .logo-container img {
+        max-width: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-container h1 {
+        font-size: 0.625rem;
+    }
+
+    .logo-container img {
+        max-width: 30px;
+    }
+}
+
+@media (max-width: 360px) {
+    .title-container h1 {
+        font-size: 0.625rem;
+    }
+
+    .logo-container img {
+        max-width: 25px;
+    }
+}
