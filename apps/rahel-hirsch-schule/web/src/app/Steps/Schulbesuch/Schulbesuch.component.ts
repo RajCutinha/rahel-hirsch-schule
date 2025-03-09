@@ -8,7 +8,7 @@ import { InputTextModule } from 'primeng/inputtext';
   imports: [ButtonModule, InputTextModule, ReactiveFormsModule],
   selector: 'app-schulbesuch',
   templateUrl: './Schulbesuch.component.html',
-  styleUrl: './Schulbesuch.component.scss'
+  styleUrl: './Schulbesuch.component.css'
 })
 export class SchulbesuchComponent {
   constructor(private controlContainer: ControlContainer) {}

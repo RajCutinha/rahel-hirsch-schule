@@ -1,4 +1,4 @@
-<div id="persönliches-section" class="form-background mx-auto" [formGroup]="personForm">
+<div id="persönliches-section" class="form-background mx-auto bg-red-400" [formGroup]="personForm">
     <div class="form-title mx-auto">Persönliche Daten</div>
     <div class="container">
         <div class="input-container">
@@ -48,14 +48,14 @@
         <div class="input-container">
             <label for="handynummer">Handynummer</label>
             <div class="input-details">
-                <input type="text" id="handynummer" formControlName="phoneNumber" />
+                <input type="text" id="handynummer" inputmode="numeric" pattern="[0-9]+" formControlName="phoneNumber" />
                 <p id="details">Bitte geben Sie in jedem Fall eine Handy- oder Telefonnummer an.</p>
             </div>
         </div>
         <div class="input-container">
             <label for="nachname">Telefon</label>
             <div class="input-details">
-                <input type="text" id="telefon" formControlName="telephone" />
+                <input type="text" id="telefon" inputmode="numeric" pattern="[0-9]+" formControlName="telephone" />
                 <p id="telefon">Bitte geben Sie in jedem Fall eine Handy- oder Telefonnummer an.</p>
             </div>
         </div>

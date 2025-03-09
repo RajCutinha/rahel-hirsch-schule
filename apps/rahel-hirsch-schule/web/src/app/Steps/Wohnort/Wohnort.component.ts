@@ -8,7 +8,7 @@ import { InputTextModule } from 'primeng/inputtext';
     imports: [ButtonModule, InputTextModule, ReactiveFormsModule],
     selector: 'app-wohnort',
     templateUrl: './Wohnort.component.html',
-    styleUrl: './Wohnort.component.scss'
+    styleUrl: './Wohnort.component.css'
 })
 export class WohnortComponent {
     constructor(private controlContainer: ControlContainer) {}

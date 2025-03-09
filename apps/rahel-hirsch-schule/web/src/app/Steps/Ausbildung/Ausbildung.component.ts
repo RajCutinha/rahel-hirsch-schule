@@ -9,7 +9,7 @@ import { InputTextModule } from 'primeng/inputtext';
     imports: [RouterModule, ButtonModule, InputTextModule, ReactiveFormsModule],
     selector: 'app-ausbildung',
     templateUrl: './Ausbildung.component.html',
-    styleUrl: './Ausbildung.component.scss'
+    styleUrl: './Ausbildung.component.css'
 })
 export class AusbildungComponent {
 

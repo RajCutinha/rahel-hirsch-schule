@@ -6,7 +6,7 @@ import { ButtonModule } from 'primeng/button';
     imports: [RouterModule, ButtonModule],
     selector: 'app-navigation',
     templateUrl: './Navigation.component.html',
-    styleUrl: './Navigation.component.scss'
+    styleUrl: './Navigation.component.css'
 })
 export class NavigationComponent {
 
@@ -31,7 +31,7 @@ export class NavigationComponent {
     scroll(event: MouseEvent) {
 
         const label = (event.target as HTMLElement).textContent?.trim();
-        
+
         const button = document.getElementById(`${label}`) as HTMLButtonElement;
 
         if (button){
@@ -46,7 +46,7 @@ export class NavigationComponent {
             button.style.border = '1px solid #00628A';
         }
 
-   
+
         const section = label?.toLowerCase() + '-section';
         let element = document.getElementById(section);
 

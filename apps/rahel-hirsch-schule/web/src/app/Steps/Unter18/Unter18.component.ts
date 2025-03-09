@@ -8,7 +8,7 @@ import { InputTextModule } from 'primeng/inputtext';
     imports: [ButtonModule, InputTextModule, ReactiveFormsModule],
     selector: 'app-unter18',
     templateUrl: './Unter18.component.html',
-    styleUrl: './Unter18.component.scss'
+    styleUrl: './Unter18.component.css'
 })
 export class Unter18Component {
   constructor(private controlContainer: ControlContainer) {}

@@ -7,7 +7,7 @@ import { ButtonModule } from 'primeng/button';
     imports: [ButtonModule, ReactiveFormsModule],
     selector: 'app-bestaetigung',
     templateUrl: './Bestaetigung.component.html',
-    styleUrl: './Bestaetigung.component.scss'
+    styleUrl: './Bestaetigung.component.css'
 })
 export class BestaetigungComponent {
   constructor(private controlContainer: ControlContainer) {}

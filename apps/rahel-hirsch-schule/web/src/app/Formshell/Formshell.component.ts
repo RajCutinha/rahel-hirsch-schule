@@ -28,7 +28,7 @@ import { BestaetigungComponent } from '../Steps/Bestaetigung/Bestaetigung.compon
     ],
     selector: 'app-root',
     templateUrl: './Formshell.component.html',
-    styleUrl: './Formshell.component.scss'
+    styleUrl: './Formshell.component.css'
 })
 export class FormshellComponent {
     registrationForm = new FormGroup({
