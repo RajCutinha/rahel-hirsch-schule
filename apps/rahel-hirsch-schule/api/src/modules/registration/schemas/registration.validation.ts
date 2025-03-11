@@ -61,3 +61,29 @@ export const GraduationValidationSchema = z.object({
     fachabiturSchriftlTeil: z.boolean(),
     noGraduation: z.boolean()
 });
+
+export const emergencyContactValidationSchema = z.object({
+    name: z.string().max(255),
+    phoneNumber: z.string().max(255),
+});
+
+export const schoolDaysValidationSchema = z.object({
+    schoolDays: z.array(z.string().max(255)),
+});
+
+export const contractFileValidationSchema = z.object({
+    contractFile: z.string().max(255),
+});
+
+export const educationValidationSchema = z.object({
+    degree: z.string().max(255),
+    lastSchool: z.string().max(255),
+    graduationYear: z.string().max(255),
+    graduationType: z.string().max(255),
+    graduationTraining: z.string().max(255),
+    newMember: z.boolean(),
+});
+
+export const confirmationValidationSchema = z.object({
+    confirmation: z.boolean(),
+});

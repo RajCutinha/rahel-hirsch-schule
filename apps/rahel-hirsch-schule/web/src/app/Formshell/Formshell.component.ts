@@ -75,6 +75,16 @@ export class FormshellComponent {
         lastname: new FormControl(''),
         telephone: new FormControl('')
       }),
+      remainingInfo: new FormControl({
+        specialty: new FormControl(''),
+        entryDate: new FormControl('', Validators.required),
+        contractNumber: new FormControl('', Validators.required),
+        motherLanguage: new FormControl('', Validators.required),
+        reEducation: new FormControl(''),
+        isFromBrandenburg: new FormControl(''),
+        webSave: new FormControl(''),
+        educationPermit: new FormControl(''),
+      }),
       employer: new FormGroup({
         employerName: new FormControl('', Validators.required),
         employerStreet: new FormControl('', Validators.required),
