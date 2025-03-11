@@ -8,8 +8,7 @@ import { InputTextModule } from 'primeng/inputtext';
   imports: [ButtonModule, InputTextModule, ReactiveFormsModule],
   selector: 'app-persoenliches',
   templateUrl: './Persoenliches.component.html',
-  styleUrl: './Persoenliches.component.css',
-  encapsulation: ViewEncapsulation.None
+  styleUrl: './Persoenliches.component.css'
 })
 export class PersoenlichesComponent {
   constructor(private controlContainer: ControlContainer) {}

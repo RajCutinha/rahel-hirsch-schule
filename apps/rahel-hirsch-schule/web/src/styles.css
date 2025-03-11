@@ -30,12 +30,7 @@ body {
 .form-background {
     background-color: #e3e1e1;
     border-radius: 15px 15px 0px 0px;
-    padding-bottom: 1em;
     overflow: clip;
-
-    & > div ~ div {
-        padding-inline: 0.5em;
-    }
 }
 
 .form-title {
@@ -56,10 +51,42 @@ body {
     font-size: 1.5rem;
     padding: 0.2em 0.5em;
     color: white;
+    margin-bottom: 1em;
 }
 
-@media (max-width: 768px) {
-    .form-background {
-        width: 95%;
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5em;
+    flex-wrap: wrap;
+}
+
+.input-container {
+    padding-inline: 4em;
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+
+    & > * {
+        width: 100%;
     }
+
+    & input[type="text"], & input[type="date"] {
+        border-width: 1px;
+        border-color: gray;
+        font-size: 1.5rem;
+        width: 100%;
+    }
+
+    & label {
+      font-size: 1.5rem;
+    }
+}
+
+#zustimmung {
+  margin-right: 1em;
+}
+
+.required {
+    color: red;
 }

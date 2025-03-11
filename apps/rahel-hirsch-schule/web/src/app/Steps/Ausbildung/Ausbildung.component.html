@@ -1,10 +1,10 @@
-<div id="ausbildung-section" class="form-background mx-auto">
-    <div class="form-title mx-auto">Ausbildungsdaten</div>
+<div id="ausbildung-section" class="form-background">
+    <div class="form-title">Ausbildungsdaten</div>
     <div class="container">
-        <div>
+        <div class="input-container">
             <label for="fachrichtung">Ich melde mich an zur Ausbildung als<span class="required">*</span></label>
         </div>
-        <div class="fachrichtung-radio" [formGroup]="employerForm">
+        <div class="fachrichtung-radio flex gap-2 input-container" [formGroup]="employerForm">
             <div class="div-fachrichtung">
                 <input type="radio" id="zfa" name="employerType" value="zfa" formControlName="employerType" />
                 <span class="span-fachrichtung">Zahnmedizinische/r Fachangestellte/r (ZFA)</span>
@@ -53,9 +53,10 @@
         </div>
     </div>
     <div class="container" id="schultagewunsch">
+      <div class="input-container">
         <label for="schultagewunsch" id="schultagewunsch">Schultagewunsch</label>
         <div class="input-details">
-            <div class="schultagewunsch">
+            <div class="schultagewunsch flex gap-2">
                 @for (day of schooldays; track day.value) {
                     <div class="check-with-text">
                         <input type="checkbox"
@@ -67,6 +68,7 @@
                     </div>
                 }
             </div>
+            </div>
             <p>
                 Wählen Sie bitte eine Kombination aus, an denen die Praxis Sie für die Berufsschule bevorzugt
                 freistellen möchte
@@ -74,7 +76,7 @@
         </div>
     </div>
     <div class="container" [formGroup]="parentForm">
-        <div class="input-group">
+        <div class="input-group input-container">
             <label for="vertragHochladen" id="vertragHochladen">Ausbildungsvertrag hochladen</label>
             <input type="file"
                    id="vertragHochladen"

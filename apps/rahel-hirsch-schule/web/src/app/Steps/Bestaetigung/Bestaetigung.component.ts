@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { ControlContainer, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 import { ButtonModule } from 'primeng/button';
 
 @Component({
-    imports: [ButtonModule, ReactiveFormsModule],
+    imports: [ButtonModule, ReactiveFormsModule, CommonModule],
     selector: 'app-bestaetigung',
     templateUrl: './Bestaetigung.component.html',
     styleUrl: './Bestaetigung.component.css'

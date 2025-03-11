@@ -1,5 +1,5 @@
-<div id="persönliches-section" class="form-background mx-auto bg-red-400" [formGroup]="personForm">
-    <div class="form-title mx-auto">Persönliche Daten</div>
+<div id="persönliches-section" class="form-background w-full" [formGroup]="personForm">
+    <div class="form-title">Persönliche Daten</div>
     <div class="container">
         <div class="input-container">
             <label for="vorname">Vorname<span class="required">*</span></label>
@@ -10,10 +10,10 @@
             <input type="text" id="nachname" formControlName="lastname" />
         </div>
     </div>
-    <div class="container">
+    <div class="container align-baseline">
         <div class="input-container">
             <label for="geschlecht">Geschlecht<span class="required">*</span></label>
-            <div class="gender-radio">
+            <div class="gender-radio flex gap-2">
                 <input type="radio" id="männlich" name="gender" value="männlich" formControlName="gender" /><span class="gender">männlich</span>
                 <input type="radio" id="weiblich" name="gender" value="weiblich" formControlName="gender" /><span class="gender">weiblich</span>
                 <input type="radio" id="divers" name="gender" value="divers" formControlName="gender" /><span class="gender">divers</span>
